@@ -1,0 +1,33 @@
+<h3 *ngIf="showProduct"> Product: {{showProduct.name}}</h3>
+<p *ngIf="error">{{error}}</p>
+<div *ngIf="showProduct" class="update">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Product Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Name: </th>
+        <td>{{ showProduct.name }}</td>
+      </tr>
+      <tr>
+        <th>QTY: </th>
+        <td>{{ showProduct.qty }}</td>
+      </tr>
+      <tr>
+        <th>Price: </th>
+        <td>{{ showProduct.price }}</td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="btn btn-success" (click)="back()">Go Back</button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteProduct(showProduct._id)">Delete Product</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

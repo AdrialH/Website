@@ -1,0 +1,19 @@
+*{
+  padding: 10px;
+  margin: 10px;
+}
+p{
+  color: red;
+  font-weight: bold;
+}
+.update{
+  vertical-align: top;
+  display: inline-block; 
+  background-color: bisque;
+  width: auto;
+}
+span{
+  color: green;
+  text-decoration: underline;
+  font-weight: bold;
+}
