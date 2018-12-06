@@ -1,28 +1,30 @@
 {
-  "name": "endangeredSpecies",
+  "name": "Products",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phil-krull/endangeredSpecies.git"
+    "url": "git+https://github.com/AdrialH/Product.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/phil-krull/endangeredSpecies/issues"
+    "url": "https://github.com/AdrialH/Product/issues"
   },
-  "homepage": "https://github.com/phil-krull/endangeredSpecies#readme",
+  "homepage": "https://github.com/AdrialH/Product#readme",
+  "description": "",
   "dependencies": {
+    "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
     "express-flash": "0.0.2",
-    "mongoose": "^5.2.7",
-    "mongoose-unique-validator": "^2.0.1",
-    "ngx-order-pipe": "^2.0.1"
+    "express-session": "^1.15.6",
+    "mongoose": "^5.3.15",
+    "socket.io": "^2.2.0"
   }
 }
