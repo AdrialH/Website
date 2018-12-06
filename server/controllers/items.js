@@ -17,10 +17,7 @@ module.exports = {
     
     show: (req, res)=>{
         console.log("Show in item.js", req.params.id)
-        Product.findById(req.params.id).then(item => res.json(item)).catch(err => res.json(err));
-        
-        
-        
+        Product.findById(req.params.id).then(item => res.json(item)).catch(err => res.json(err)); 
         
     },
     
