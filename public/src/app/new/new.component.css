@@ -6,12 +6,19 @@ p{
   color: red;
   font-weight: bold;
 }
+.top{
+  height: 100%;
+  width: 100%;
+  background-image: url(../../assets/img/black-waves-background.jpg);
+  background-size: cover;
+  background-position: center;
+}
 .update{
-  vertical-align: top;
+  padding-top: 100px;
+  margin-left: 25%;
   display: inline-block; 
-  background-color:black;
+  background-color: transparent;
   color: aliceblue;
-  width: auto;
 }
 span{
   color: green;

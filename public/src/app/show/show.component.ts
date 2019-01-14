@@ -43,6 +43,6 @@ export class ShowComponent implements OnInit {
     })
   }
   back(){
-    this._router.navigate(['/products'])
+    this._router.navigate(['/products/list'])
   }
 }

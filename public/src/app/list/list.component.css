@@ -2,3 +2,20 @@
   padding: 10px;
   margin: 10px;
 }
+#top{
+  padding-top: 50px;
+}
+li{
+  margin-left: 50px;
+}
+div:nth-child(1){
+  background: url("../../assets/img/Trees.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.back{
+  background-image: url(../../assets/img/RandomThumbnail.jpg);
+  background-attachment: fixed;
+  height: 100px;
+  width: 100px;
+}

@@ -1,0 +1,72 @@
+<!-- Full Page Intro -->
+<div class="new full-page-intro">
+  <!-- Mask & flexbox options-->
+  <div class="mask d-flex justify-content-center align-items-center">
+    <!-- Content -->
+    <div class="container">
+      <!--Grid row-->
+      <div class="row wow">
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 white-text text-center text-md-left">
+          <h1 class="display-4 font-weight-bold animated slideInLeft">Adrial Hurd <br> Full-Stack Development</h1>
+          <hr class="hr-light">
+          <a [routerLink]="['/home']" class="btn btn-indigo btn-lg waves-effect waves-light animated flipInX slow">Home
+            Page</a>
+        </div>
+        <!--Grid column-->
+        <div class="col-md-6 col-xl-5 mb-4">
+          <div class="card">
+            <div class="card-body animated fadeIn slow">
+              <!-- Form -->
+              <form (submit)="addComments()">
+                <h3 class="dark-grey-text text-center">
+                  <strong>Leave a message:</strong>
+                </h3>
+                <hr>
+                <div class="md-form">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" id="form3" class="form-control" required minlength="3" maxlength="20" name="createPost.name" [(ngModel)]="createPost.name"
+                #name="ngModel">
+                  <label for="form3">Your name</label>
+                  <small>Name must be filled in.</small>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="text" id="form2" class="form-control" required minlength="3" maxlength="20" name="createPost.email" [(ngModel)]="createPost.email"
+                #email="ngModel">
+                  <label for="form2">Your email</label>
+                  <small>Email must be filled in.</small>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-pencil-alt prefix grey-text"></i>
+                  <textarea type="text" id="form8" class="md-textarea" required minlength="3" maxlength="250" name="createPost.text" [(ngModel)]="createPost.text"
+                #text="ngModel"></textarea>
+                  <label for="form8">Your message</label>
+                  <small>Comment must be between 3 and 250 characters.</small>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-indigo waves-effect waves-light" type="submit">Send</button>
+                  <hr>
+                </div>
+              </form>
+              <!-- Card -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Message Card -->
+  <div class="card" *ngFor="let i of comments">
+    <div class="card-body elegant-color white-text rounded-bottom">
+      <h4 class="card-title">{{ i.name }}</h4>
+      <hr class="hr-light">
+      <p class="card-text white-text mb-4">{{i.text}}</p>
+      <button class="btn btn-danger" (click)="deleteComment(i._id)">Delete Comment</button>
+    </div>
+  </div>
+  <!-- /End MessageCard -->
+</div>
+<script type="text/javascript">
+  new WOW().init();
+</script>

@@ -1,42 +1,44 @@
-<div class="update">
-    <h1>Add Product</h1>
-    {{err}}
-    <form action="" (submit)="addProduct()">
-      <h6 *ngIf="name.erros || qty.errors || price.errors" ><span>Submit</span> button will show when both fields are filled in.</h6>
-      <table>
-        <tr>
-          <td>Name:</td>
-          <p *ngIf="name.errors">Products must contain a Name. </p>
-          <td>
-            <input type="text" required minlength="3" maxlength="20" name="createProduct.name" [(ngModel)]="createProduct.name" [(ngModel)]="createProduct.name"
+<div class="top">
+  <div class="update">
+      <h1>Add Product</h1>
+      {{err}}
+      <form action="" (submit)="addProduct()">
+        <h6 *ngIf="name.erros || qty.errors || price.errors" ><span>Submit</span> button will show when both fields are filled in.</h6>
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td>
+              <input type="text" required minlength="3" maxlength="20" name="createProduct.name" [(ngModel)]="createProduct.name" [(ngModel)]="createProduct.name"
               #name="ngModel">
-          </td>
-        </tr>
-        <tr>
-          <td>QTY:</td>
-          <p *ngIf="qty.errors">Products must contain a Quanity. </p>
-          <td>
-            <input type="text" required min="3" name="createProduct.qty" [(ngModel)]="createProduct.qty" [(ngModel)]="createProduct.qty"
+              <p *ngIf="name.errors">Products must contain a Name. </p>
+            </td>
+          </tr>
+          <tr>
+            <td>QTY:</td>
+            <td>
+              <input type="text" required min="3" name="createProduct.qty" [(ngModel)]="createProduct.qty" [(ngModel)]="createProduct.qty"
               #qty="ngModel">
-          </td>
-        </tr>
-        <tr>
-          <td>Price:</td>
-          <p *ngIf="price.errors">Products must contain a Price. </p>
-          <td>
-            <input type="text" required min="3" name="createProduct.price" [(ngModel)]="createProduct.price" [(ngModel)]="createProduct.price"
+              <p *ngIf="qty.errors">Products must contain a Quanity. </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Price:</td>
+            <td>
+              <input type="text" required min="3" name="createProduct.price" [(ngModel)]="createProduct.price" [(ngModel)]="createProduct.price"
               #price="ngModel">
-          </td>
-        </tr>
-        <tr>
-          <td *ngIf="!name.errors && !qty.errors && !price.errors">
-            <button type="button" class="btn btn-success" type="submit">Add Product</button>
-          </td>
-          <td>
-            <button type="button" class="btn btn-danger" (click)="back()">Go Back</button>
-          </td>
-        </tr> 
-      </table>
-      <p *ngIf="errors">{{errors}}</p>
-    </form>
-  </div>
+              <p *ngIf="price.errors">Products must contain a Price. </p>
+            </td>
+          </tr>
+          <tr>
+            <td *ngIf="!name.errors && !qty.errors && !price.errors">
+              <button type="button" class="btn btn-success" type="submit">Add Product</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)="back()">Go Back</button>
+            </td>
+          </tr> 
+        </table>
+        <p *ngIf="errors">{{errors}}</p>
+      </form>
+    </div>
+</div>

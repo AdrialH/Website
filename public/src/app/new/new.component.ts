@@ -40,6 +40,6 @@ export class NewComponent implements OnInit {
     });
   }
   back(product){
-    this._router.navigate(['/products'])
+    this._router.navigate(['/products/list'])
   }
 }

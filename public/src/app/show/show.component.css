@@ -2,6 +2,18 @@
   padding: 10px;
   margin: 10px;
 }
+h3{
+  color: blue;
+}
+.top{
+  padding-top: 50px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../assets/img/black-waves-background.jpg);
+  background-size: cover;
+  background-position: center;
+}
 p{
   color: red;
   font-weight: bold;

@@ -30,13 +30,13 @@ export class EditComponent implements OnInit {
   updateProduct(id, rest) {
     // console.log("update1",id, rest)
     this.httpService.updateProduct(id, rest).subscribe(product => this.product = product);
-    this._router.navigate(['/products']);
+    this._router.navigate(['/products/list']);
   };
   deleteProduct(product_id: number): void {
     this.httpService.deleteProduct(product_id).subscribe(product => this.product = product);
-    this._router.navigate(['/products'])
+    this._router.navigate(['/products/list'])
   }
   back() {
-    this._router.navigate(['/products'])
+    this._router.navigate(['/products/list'])
   }
 }

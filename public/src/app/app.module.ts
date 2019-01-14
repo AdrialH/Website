@@ -12,6 +12,9 @@ import { NewComponent } from './new/new.component';
 import { EditComponent } from './edit/edit.component';
 import { ShowComponent } from './show/show.component';
 import { ListComponent } from './list/list.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ListComponent } from './list/list.component';
     NewComponent,
     EditComponent,
     ShowComponent,
-    ListComponent
+    ListComponent,
+    HomeComponent,
+    NavbarComponent,
+    LandingComponent
   ],
   imports: [
   

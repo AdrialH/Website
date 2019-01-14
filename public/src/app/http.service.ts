@@ -31,4 +31,17 @@ export class HttpService {
   deleteProduct(product_id: number) {
     return this._http.delete(`/items/${product_id}`)
   }
+  //Get all comments for landing page
+  getComment(){
+    return this._http.get('/comment');
+  }
+  // Adding a comment on landing page
+  addComment(comment){
+    console.log("Comment", comment)
+    return this._http.post('/comment', comment);
+  }
+  removeComment(comment_id: number) {
+    console.log("Service delete", comment_id)
+    return this._http.delete(`/comment/${comment_id}`)
+  }
 }

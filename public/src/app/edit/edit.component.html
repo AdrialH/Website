@@ -1,41 +1,42 @@
-<div class="update" *ngIf="product">
-  <h1>Update Product Information</h1>
-  <h4>
-    <span>Updating:</span> {{product.name}}</h4>
-  <form (submit)="updateProduct(product._id, product)">
-    <h6 *ngIf="name.errors || qty.errors || price.errors">
-      <span>Submit</span> button will show when both fields have an input.</h6>
-    <table>
-      <tr>
-        <td>Name:</td>
-        <p *ngIf="name.errors">Products must contain a Name. </p>
-        <td>
-          <input type="text" required minlength="3" maxlength="20" name="product.name" [(ngModel)]="product.name" #name="ngModel">
-        </td>
-      </tr>
-      <tr>
-        <td>QTY:</td>
-        <p *ngIf="qty.errors">Products must contain a Quanity. </p>
-        <td>
-          <input type="text" required name="product.qty" [(ngModel)]="product.qty" #qty="ngModel">
-        </td>
-      </tr>
-      <tr>
-        <td>Price:</td>
-        <p *ngIf="price.errors">Products must contain a price. </p>
-        <td>
-          <input type="text" required min="1" name="product.price" [(ngModel)]="product.price" #price="ngModel">
-        </td>
-      </tr>
-      <tr>
-        <td *ngIf="!name.errors && !qty.errors && !price.errors">
-          <button type="button" class="btn btn-danger" type="submit">Update</button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-success" (click)="back()">Go Back</button>
-        </td>
-      </tr>
-    </table>
-  </form>
-
+<div class="top">
+  <div class="update" *ngIf="product">
+    <h1>Update Product Information</h1>
+    <h4>
+      <span>Updating:</span> {{product.name}}</h4>
+    <form (submit)="updateProduct(product._id, product)">
+      <h6 *ngIf="name.errors || qty.errors || price.errors">
+        <span>Submit</span> button will show when both fields have an input.</h6>
+      <table>
+        <tr>
+          <td>Name:</td>
+          <p *ngIf="name.errors">Products must contain a Name. </p>
+          <td>
+            <input type="text" required minlength="3" maxlength="20" name="product.name" [(ngModel)]="product.name" #name="ngModel">
+          </td>
+        </tr>
+        <tr>
+          <td>QTY:</td>
+          <p *ngIf="qty.errors">Products must contain a Quanity. </p>
+          <td>
+            <input type="text" required name="product.qty" [(ngModel)]="product.qty" #qty="ngModel">
+          </td>
+        </tr>
+        <tr>
+          <td>Price:</td>
+          <p *ngIf="price.errors">Products must contain a price. </p>
+          <td>
+            <input type="text" required min="1" name="product.price" [(ngModel)]="product.price" #price="ngModel">
+          </td>
+        </tr>
+        <tr>
+          <td *ngIf="!name.errors && !qty.errors && !price.errors">
+            <button type="button" class="btn btn-danger" type="submit">Update</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-success" (click)="back()">Go Back</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
 </div>

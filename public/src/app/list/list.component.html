@@ -1,6 +1,15 @@
-<div *ngIf="products">
+<div *ngIf="products" id="top">
+  <!-- <img src="../../assets/img/Trees.png" alt="Trees"> -->
+  <h6>This sight is to keep track of product you may need in the future. A sight built to show the validations and different features. Unfortunatly not the best looking. Please have fun and mess around while visiting.</h6>
+
+  <h3>Operating site</h3>
+  <ul><!--
+  --><li>You can add a new product to the list by the button located bellow</li><!--
+  --><li>You can not delete and item from the list until the quanity is changed to zero. I did this to give the feel of ordering items and you dont want the item removed until you have received the quanity you originally planned on.</li><!--
+  --><li>To remove/delete item from list go to "edit" change the quanity to zero then click on details to delete.</li><!--
+  --></ul>
   <h1>Product List</h1>
-  <button [routerLink]="['/products/new']" class="btn btn-sm btn-outline-secondary">Add New Product</button>
+  <button [routerLink]="['/products/new']" class="btn btn-sm btn-outline-primary">Add New Product</button>
   <div>
     <table class="table table-dark">
       <thead>
@@ -27,3 +36,4 @@
       </tbody>
     </table>
   </div>
+</div>
