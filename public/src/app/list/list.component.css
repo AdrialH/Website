@@ -19,3 +19,6 @@ div:nth-child(1){
   height: 100px;
   width: 100px;
 }
+.table{
+  width: 98%;
+}
