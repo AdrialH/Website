@@ -21,9 +21,9 @@ export class ShowComponent implements OnInit {
 
   ngOnInit() {
     this._route.params.subscribe((params: Params) => {
-      console.log("start", params.id)
+      // console.log("start", params.id)
       this.httpService.showProduct(params.id).subscribe(data => {
-        console.log("data",data);
+        // console.log("data",data);
         this.showProduct = data;
       })
   });
@@ -31,12 +31,12 @@ export class ShowComponent implements OnInit {
   deleteProduct(product_id:number, product): void {
     this.httpService.showProduct(product_id).subscribe(product => {
       if (product['qty'] == 0){
-        console.log("true")
+        // console.log("true")
         this.httpService.deleteProduct(product_id).subscribe(product => this.showProduct = product);
         this._router.navigate(['/products'])
 
       }else{
-        console.log("false", product)
+        // console.log("false", product)
         this.error = "Sorry, this product can only be deleted when the quanity is 0."
         this._router.navigate(['/products', product_id])
       }

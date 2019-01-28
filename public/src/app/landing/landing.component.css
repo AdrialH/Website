@@ -1,5 +1,4 @@
 .new{
-  height: 100% !important;
   margin-top: 42px;
   background-color: rgba(0, 0, 0, 0.7);
   background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../../assets/img/apibackground.png);

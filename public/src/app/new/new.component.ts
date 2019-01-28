@@ -22,13 +22,13 @@ export class NewComponent implements OnInit {
 
   ngOnInit() {
     this.httpService.getProducts().subscribe(products => {
-      console.log(products)
+      // console.log(products)
       this.products = products as Product[]
     });
   }
   addProduct() {
     this.httpService.addProduct(this.createProduct).subscribe(product => {
-      console.log(product);
+      // console.log(product);
       if (product['errors']) {
         this.errors = "This Product already exists."
         this._router.navigate(['products/new'])

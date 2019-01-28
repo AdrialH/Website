@@ -24,9 +24,9 @@ export class LandingComponent implements OnInit {
   };
   
   deleteComment(comment_id: number): void {
-    console.log("Delete first step", comment_id);
+    // console.log("Delete first step", comment_id);
     this.httpService.removeComment(comment_id).subscribe(comment => {
-      console.log("inside delete", comment)
+      // console.log("inside delete", comment)
       this.comment = comment
       this.httpService.getComment().subscribe(comments=> this.comments = comments as Comment[])
       this._router.navigate(['/landing'])
@@ -34,7 +34,7 @@ export class LandingComponent implements OnInit {
   };
   addComments() {
     this.httpService.addComment(this.createPost).subscribe(comment=> {
-      console.log(comment);
+      // console.log(comment);
       if (comment['errors']) {
         this.errors = "please fill in all feilds."
         this._router.navigate([`/landing`])
