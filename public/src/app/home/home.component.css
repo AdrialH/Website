@@ -1,6 +1,6 @@
 h6, div{
   color: antiquewhite;
-  font-style: italic;
+  font-style: oblique;
 }
 img{
   height: 430px;
@@ -9,25 +9,26 @@ img{
   z-index: 5;
 }
 #img1{
-  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../../assets/img/bright-light-sunset-wallpapers-61053-9533245.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../assets/img/bright-light-sunset-wallpapers-61053-9533245.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #img2{
-  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../../assets/img/AHurd1.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../assets/img/AHurd1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #img3{
-  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../../assets/img/gaming-fill.png);
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../assets/img/gaming-fill.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #about{
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(../../assets/img/doodle-icon_1133-567.jpg);
+  color: aliceblue;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../../assets/img/doodle-icon_1133-567.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;  
@@ -36,4 +37,8 @@ img{
 }
 .wow{
   visibility: hidden;
+}
+.col-sm{
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
